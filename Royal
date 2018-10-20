@@ -1,0 +1,102 @@
+## In The Name Of God [by mrhamid] ##
+
+#----functions-----------
+#red
+red() {
+  printf '\e[1;31m%s\n\e[0;39;49m' "$@"
+}
+#green
+green() {
+  printf '\e[1;32m%s\n\e[0;39;49m' "$@"
+}
+#yellow
+yellow() {
+  printf '\e[1;33m%s\n\e[0;39;49m' "$@"
+}
+#----install-----------
+if [ "$1" = "install" ]; then
+chmod +x tg
+ sudo apt-get -y update && sudo apt-get -y upgrade 
+ sudo apt-get --force-yes install git wget screen tmux libconfig9 libevent-dev libjansson4 libstdc++6 lua-socket lua5.2 liblua5.2 make unzip redis-server software-properties-common g++
+      sudo apt-get -y update && sudo apt-get -y upgrade
+      sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test && sudo apt-get update && sudo apt-get install -y gcc-4.9 g++-4.9 && sudo update-alternatives —install /usr/bin/gcc gcc /usr/bin/gcc-4.9 60 —slave /usr/bin/g++ g++ /usr/bin/g++-4.9
+	    sudo apt-get -y update && sudo apt-get -y upgrade && sudo apt-get -y dist-upgrade && sudo apt-get -y autoremove
+		sudo service redis-server restart+
+#------launch-----------
+elif [ "$1" = "launch" ]; then
+if [ -z "$2" ]; then
+green "Enter Your Bot-number :" 
+read -rp ' ' BOT
+while true
+do
+./tg -p "tabchi-"$BOT -s $PWD/bot_$BOT.lua
+sleep 5
+yellow "Bot Running !"
+done
+else
+while true
+do
+./tg -p "tabchi-"$2 -s $PWD/bot_$2.lua
+sleep 5
+yellow "Bot Running !"
+done
+fi
+#------create-----------
+elif [ "$1" = "create" ]; then
+if [ -z "$2" ]; then
+green "Enter Your Bot-number :" 
+read -rp ' ' BOT
+green "Enter Accounet Phone Number , Example : +989858585858"
+read Phone
+./tg -p "tabchi-"$BOT --login --phone=${Phone}
+cat bot >> bot_$BOT.lua
+sleep 5
+yellow "Done Bot"$BOT" Created , Launch With ./Royal launch "$BOT" !"
+else
+green "Enter Accounet Phone Number , Example : +989858585858"
+read Phone
+./tg -p "tabchi-"$2 --login --phone=${Phone}
+cat bot >> bot_$2.lua
+sleep 5
+yellow "Done Bot"$2" Created , Launch With ./Royal launch "$2" !"
+fi
+#------auto-----------
+elif [ "$1" = "auto" ]; then
+#1
+tmux kill-session -t "Tabchi1"
+tmux new-session -d -s "Tabchi1" "./Royal launch 1"
+tmux detach -s "Tabchi1"
+yellow "Bot1 Running !"
+
+#2
+sleep 5
+tmux kill-session -t "Tabchi2"
+tmux new-session -d -s "Tabchi2" "./Royal launch 2"
+tmux detach -s "Tabchi2"
+yellow "Bot2 Running !"
+
+#3
+sleep 5
+tmux kill-session -t "Tabchi3"
+tmux new-session -d -s "Tabchi3" "./Royal launch 3"
+tmux detach -s "Tabchi3"
+yellow "Bot3 Running !"
+
+#4
+sleep 5
+tmux kill-session -t "Tabchi4"
+tmux new-session -d -s "Tabchi4" "./Royal launch 4"
+tmux detach -s "Tabchi4"
+yellow "Bot4 Running !"
+
+#5
+sleep 5
+tmux kill-session -t "Tabchi5"
+tmux new-session -d -s "Tabchi5" "./Royal launch 5"
+tmux detach -s "Tabchi5"
+yellow "Bot5 Running !"
+sleep 5
+yellow "End !"
+
+#------end-----------
+fi
