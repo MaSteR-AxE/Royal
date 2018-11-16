@@ -1,7 +1,7 @@
 do
 local B = {
-SudoID = "415884524",
-Channel = "@GuardianTM",
+SudoID = "591735330",
+Channel = "@SkyNetTM",
 		}
 return B
 end
