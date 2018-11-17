@@ -436,7 +436,7 @@ end
 ---#maxgroups
 elseif text and text:match('^maxgroup (%d+)') then
 local gps = text:match('^maxgroup (%d+)')
-if tonumber(gps) > 500 then 
+if tonumber(gps) > 500000 then 
 local text1 = RTexT.maxgroupserror:gsub("CH",channel)
 send(msg.chat_id,msg.id,text1)
 else 
@@ -446,7 +446,7 @@ send(msg.chat_id,msg.id,text)
 end
 elseif text and text:match('^حداکثر گروه (%d+)') then
 local gps = text:match('^حداکثر گروه (%d+)')
-if tonumber(gps) > 500 then 
+if tonumber(gps) > 500000 then 
 local text1 = RTexT.maxgroupserror:gsub("CH",channel)
 send(msg.chat_id,msg.id,text1)
 else 
