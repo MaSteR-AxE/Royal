@@ -160,7 +160,7 @@ help = [[
 ✐ auto join limit
 ➖➖➖➖➖➖➖➖➖
 ➦ maxgroups {NUM}
-✐ max groups for join {400}
+✐ max groups for join {500000}
 ➖➖➖➖➖➖➖➖➖
 ➦ leavechannel {On} {Off}
 ✐ Automatic exit from channels
