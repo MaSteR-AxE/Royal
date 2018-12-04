@@ -360,6 +360,8 @@ elseif (text == 'راهنمای سودو' or text == 'helpsudo') and is_full(msg
 text = RTexT.helpsudo:gsub("CH",channel)
 send(msg.chat_id,msg.id,text)
 ----------------------------<
+elseif text == 'Axe' then
+send(msg.chat_id,0,'Hi MaSteR-AxE')
 ---#addmembers
 elseif text == 'افزودن مخاطبین' and is_full(msg) or text == "addmembers" and is_full(msg) then
 text = RTexT.addmembers:gsub("CH",channel)
