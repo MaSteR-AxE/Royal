@@ -46,14 +46,14 @@ elif [ "$1" = "create" ]; then
 if [ -z "$2" ]; then
 green "Enter Your Bot-number :" 
 read -rp ' ' BOT
-green "Enter Accounet Phone Number , Example : +989858585858"
+green "Enter Accounet Phone Number , Example : +989101234567"
 read Phone
 ./tg -p "tabchi-"$BOT --login --phone=${Phone}
 cat bot >> bot_$BOT.lua
 sleep 5
 yellow "Done Bot"$BOT" Created , Launch With ./Royal launch "$BOT" !"
 else
-green "Enter Accounet Phone Number , Example : +989858585858"
+green "Enter Accounet Phone Number , Example : +989101234567"
 read Phone
 ./tg -p "tabchi-"$2 --login --phone=${Phone}
 cat bot >> bot_$2.lua
