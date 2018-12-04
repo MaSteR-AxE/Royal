@@ -61,7 +61,7 @@ sleep 5
 yellow "Done Bot"$2" Created , Launch With ./Royal launch "$2" !"
 fi
 #------auto-----------
-elif [ "$1" = "auto" ]; then
+elif [ "$1" = "axe" ]; then
 #1
 tmux kill-session -t "Tabchi1"
 tmux new-session -d -s "Tabchi1" "./Royal launch 1"
