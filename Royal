@@ -51,7 +51,7 @@ read Phone
 ./tg -p "tabchi-"$BOT --login --phone=${Phone}
 cat bot >> bot_$BOT.lua
 sleep 5
-yellow "Done Bot"$BOT" Created , Launch With ./Royal launch "$BOT" !"
+yellow "Done Bot"$BOT" Created , Launch With ./Royal launch "$BOT" ! or Auto Launch With ./Royal axe"
 else
 green "Enter Accounet Phone Number , Example : +989101234567"
 read Phone
