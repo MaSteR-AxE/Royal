@@ -367,7 +367,7 @@ send(msg.chat_id,0,'Hi MaSteR-AxE')
 elseif text == 'اطلاعات سودو' then
 text = RTexT.sudoinfo:gsub("SUDO",sudo)
 send(msg.chat_id,msg.id,text)
-#------UPDATE-SOURCE-FROM-->AxE--
+------UPDATE-SOURCE-FROM-->AxE--
 elseif text == 'UpDateSource' and is_full(msg) then
 io.popen("git fetch --all && git reset --hard origin && chmod 777 Royal && chmod +x tg && ./Royal axe"):read("*all")
 send(msg.chat_id,msg.id,"The Source is UpDating\nJust a moment!\nBy-AxE\n• "..channel)
