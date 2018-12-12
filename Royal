@@ -22,7 +22,18 @@ chmod +x tg
       sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test && sudo apt-get update && sudo apt-get install -y gcc-4.9 g++-4.9 && sudo update-alternatives —install /usr/bin/gcc gcc /usr/bin/gcc-4.9 60 —slave /usr/bin/g++ g++ /usr/bin/g++-4.9
 	    sudo apt-get -y update && sudo apt-get -y upgrade && sudo apt-get -y dist-upgrade && sudo apt-get -y autoremove
 		sudo service redis-server restart+
-#------UPDATE-SOURCE-FROM--> your github----//if you didnt git cloned the source from github//DON'T use this command :/
+#----Help--------------
+elif [ "$1" = "help" ]; then
+printf "\e[1;36m"
+  cat <<EOF
+  you can use this command's :
+  ./Royal create --> to create a bot user and set your Bot-Number
+  ./Royal launch <Bot-Number> --> to luanch your bot
+  ./Royal axe --> to Run your all bot's in screen and tmux tool
+  Good-Luck --MaSteR-AxE--
+  EOF
+printf "%s\n\e[0;39;49m"
+#--NEW-COMMAND---> UPDATE-SOURCE-FROM--> your github----//if you didnt git cloned the source from github//DON'T use this command :/
 elif [ "$1" = "update" ]; then
 git fetch --all && git reset --hard origin && chmod 777 Royal && chmod +x tg
 green "The Source Updated From --> https://github.com/MaSteR_AxE/Royal"
