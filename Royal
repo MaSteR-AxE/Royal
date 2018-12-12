@@ -25,7 +25,7 @@ chmod +x tg
 #------UPDATE-SOURCE-FROM-->AxE--
 elif [ "$1" = "update" ]; then
 git fetch --all && git reset --hard origin && chmod 777 Royal && chmod +x tg
-red "The Source Updated From --> https://github.com/MaSteR_AxE/Royal"
+green "The Source Updated From --> https://github.com/MaSteR_AxE/Royal"
 #------launch-----------
 elif [ "$1" = "launch" ]; then
 if [ -z "$2" ]; then
