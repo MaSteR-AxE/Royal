@@ -1,6 +1,7 @@
 BConfig = dofile('Config.lua')
 bot =  debug.getinfo(2, "S").source:sub(2):match("bot%_(%d+)%.lua")
 sudo = BConfig.SudoID
+sudoid = BConfig.ID
 channel = BConfig.Channel
 database = require("redis")
 redis = database.connect('127.0.0.1',6379)
@@ -362,6 +363,10 @@ send(msg.chat_id,msg.id,text)
 ----------------------------<
 elseif text == 'Axe' then
 send(msg.chat_id,0,'Hi MaSteR-AxE')
+-----#sudoinfo-------------->
+elseif text == 'اطلاعات سودو' then
+text = RTexT.sudoinfo:gsub("SUDO",sudo)
+send(msg.chat_id,msg.id,text)
 ---#addmembers
 elseif text == 'افزودن مخاطبین' and is_full(msg) or text == "addmembers" and is_full(msg) then
 text = RTexT.addmembers:gsub("CH",channel)
