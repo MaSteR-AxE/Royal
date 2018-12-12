@@ -38,7 +38,7 @@ Good-Luck --MaSteR-AxE--"
 #--NEW-COMMAND---> UPDATE-SOURCE-FROM--> your github----//if you didnt git cloned the source from github//DON'T use this command :/
 elif [ "$1" = "update" ]; then
 git fetch --all && git reset --hard origin && chmod 777 Royal && chmod +x tg
-green "The Source Updated From --> https://github.com/MaSteR_AxE/Royal"
+green "The Source Updated From --> https://github.com/MaSteR-AxE/Royal"
 #------launch-----------
 elif [ "$1" = "launch" ]; then
 if [ -z "$2" ]; then
@@ -55,7 +55,7 @@ while true
 do
 ./tg -p "tabchi-"$2 -s $PWD/bot_$2.lua
 sleep 5
-yellow "Bot Running ! --EdiT--By-AxE--"
+yellow "Bot Running !"
 done
 fi
 #------create-----------
@@ -90,28 +90,28 @@ sleep 5
 tmux kill-session -t "Tabchi2"
 tmux new-session -d -s "Tabchi2" "./Royal launch 2"
 tmux detach -s "Tabchi2"
-yellow "Bot2 Running ! --EdiT--By-AxE--"
+yellow "Bot2 Running !"
 
 #3
 sleep 5
 tmux kill-session -t "Tabchi3"
 tmux new-session -d -s "Tabchi3" "./Royal launch 3"
 tmux detach -s "Tabchi3"
-yellow "Bot3 Running ! --EdiT--By-AxE--"
+yellow "Bot3 Running !"
 
 #4
 sleep 5
 tmux kill-session -t "Tabchi4"
 tmux new-session -d -s "Tabchi4" "./Royal launch 4"
 tmux detach -s "Tabchi4"
-yellow "Bot4 Running ! --EdiT--By-AxE--"
+yellow "Bot4 Running !"
 
 #5
 sleep 5
 tmux kill-session -t "Tabchi5"
 tmux new-session -d -s "Tabchi5" "./Royal launch 5"
 tmux detach -s "Tabchi5"
-yellow "Bot5 Running ! --EdiT--By-AxE--"
+yellow "Bot5 Running !"
 sleep 5
 yellow "End ! this version of Royal-Tabchi Source is EdiTeD-By--> @MaSteR_AxE"
 
