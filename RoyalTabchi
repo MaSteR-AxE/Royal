@@ -1,7 +1,7 @@
 BConfig = dofile('Config.lua')
 bot =  debug.getinfo(2, "S").source:sub(2):match("bot%_(%d+)%.lua")
 sudo = BConfig.SudoID
-sudoid = BConfig.ID
+sudousername = BConfig.USERNAME
 channel = BConfig.Channel
 database = require("redis")
 redis = database.connect('127.0.0.1',6379)
