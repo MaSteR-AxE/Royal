@@ -370,7 +370,7 @@ send(msg.chat_id,msg.id,text)
 ------UPDATE-SOURCE-FROM-Github---
 elseif text == 'UpDateSource' and is_full(msg) then
 io.popen("git fetch --all && git reset --hard origin && chmod 777 Royal && chmod +x tg"):read("*all")
-send(msg.chat_id,msg.id,"Sourse is UpDating...\nJust a moment...!\n• "..channel)
+send(msg.chat_id,msg.id,"Source is UpDating...\nJust a moment...!\n• "..channel)
 ---#addmembers
 elseif text == 'افزودن مخاطبین' and is_full(msg) or text == "addmembers" and is_full(msg) then
 text = RTexT.addmembers:gsub("CH",channel)
